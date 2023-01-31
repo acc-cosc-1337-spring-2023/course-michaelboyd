@@ -2,21 +2,9 @@
 #include "catch.hpp"
 #include "data_types.h"
 
-TEST_CASE("Verify Test Configuration", "verification")
+TEST_CASE("Test Multiply Numbers", "Verify expected output is 5 times the input integer value")
 {
-	REQUIRE(true == true);
-}
-
-TEST_CASE("Verify sum_numbers function")
-{
-	REQUIRE(add_numbers(5, 5) == 10);
-	REQUIRE(add_numbers(10, 10) == 20);
-}
-
-TEST_CASE("Test Multiply Numbers", "Verify expected output is 5 times the value of the input")
-{
-	int input;
-	int expected;
+	int input, expected;
 
 	input = 10;
 	expected = 50;
