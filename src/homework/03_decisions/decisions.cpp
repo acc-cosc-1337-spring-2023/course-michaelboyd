@@ -1,5 +1,5 @@
 #include "decisions.h"
-#include <limits>
+#include <iostream>
 
 /// @brief Convert a number grade to a letter grade
 /// @param grade numeric value for the grade to convert
@@ -65,4 +65,12 @@ std::string get_letter_grade_using_switch(int grade)
     }
 
     return result;
+}
+
+void display_menu() {
+    std::cout<<"\n";
+	std::cout<<"       MAIN MENU       "<<"\n\n";
+	std::cout<<"1-Letter grade using if"<<"\n";
+	std::cout<<"2-Letter grade using switch"<<"\n";
+	std::cout<<"3-Exit"<<"\n\n";    
 }
