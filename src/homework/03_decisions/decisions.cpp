@@ -10,27 +10,27 @@ std::string get_letter_grade_using_if(int grade)
 
     if (grade <=100 && grade >= 90)
     {
-        result = "A";
+        result = GRADE_A;
     }
     else if (grade < 90 && grade >= 80)
     {
-        result = "B";
+        result = GRADE_B;
     }
     else if (grade < 80 && grade >= 70)
     {
-        result = "C";
+        result = GRADE_C;
     }
     else if (grade < 70 && grade >= 60)
     {
-        result = "D";
+        result = GRADE_D;
     }
     else if (grade < 60 && grade >= 0)
     {
-        result = "F";
+        result = GRADE_F;
     }
     else
     {
-        result = "Invalid Input";
+        result = INVALID_INPUT_TXT;
     }
     return result;
 }
@@ -45,22 +45,22 @@ std::string get_letter_grade_using_switch(int grade)
     switch (grade)
     {
     case 90 ... 100:
-        result = "A";
+        result = GRADE_A;
         break;
     case 80 ... 89:
-        result = "B";
+        result = GRADE_B;
         break;
     case 70 ... 79:
-        result = "C";
+        result = GRADE_C;
         break;
     case 60 ... 69:
-        result = "D";
+        result = GRADE_D;
         break;
     case 0 ... 59:
-        result = "F";
+        result = GRADE_F;
         break;
     default:
-        result = "Invalid Input";
+        result = INVALID_INPUT_TXT;
         break;
     }
 
