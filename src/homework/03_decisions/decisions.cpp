@@ -8,7 +8,7 @@ std::string get_letter_grade_using_if(int grade)
 {
     std::string result;
 
-    if (grade >= 90)
+    if (grade <=100 && grade >= 90)
     {
         result = "A";
     }
@@ -41,11 +41,10 @@ std::string get_letter_grade_using_if(int grade)
 std::string get_letter_grade_using_switch(int grade)
 {
     std::string result;
-    const int max_value = std::numeric_limits<int>::max();
 
     switch (grade)
     {
-    case 90 ... max_value:
+    case 90 ... 100:
         result = "A";
         break;
     case 80 ... 89:
