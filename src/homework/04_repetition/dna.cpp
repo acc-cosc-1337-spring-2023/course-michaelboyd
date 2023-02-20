@@ -9,9 +9,11 @@ int factorial(int num)
         return 1;
     }
 
-    while (num > 1)
+    num--; //initialize num by decrementing by 1
+
+    while (num > 0)
     {
-        factorial = factorial * (num - 1);
+        factorial = factorial * (num);
         num--;
     }
     
