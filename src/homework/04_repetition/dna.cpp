@@ -2,12 +2,13 @@
 
 int factorial(int num)
 {
-    int factorial = num;
 
-    if (num == 0 || num == 1)
-    {
-        return 1;
+    //factorial of 0 is 1
+    if(num == 0) {
+        num = 1;
     }
+    
+    int factorial = num;
 
     num--; // initialize num by decrementing by 1
 
