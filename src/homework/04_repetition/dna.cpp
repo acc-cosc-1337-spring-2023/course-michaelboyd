@@ -1,4 +1,8 @@
 #include "dna.h"
+#include <iostream>
+
+using std::cout;
+using std::cin;
 
 int factorial(int num)
 {
@@ -39,4 +43,44 @@ int gcd(int num1, int num2)
         }
     }
     return num1;
+}
+
+void display_menu() {
+    auto selection = 0;
+    auto num =0;
+    auto num1 = 0;
+    auto num2 = 0;
+    std::string exit_option;
+    do
+    {
+        cout<<"\n";
+    	cout<<"1-Factorial"<<"\n";
+	    cout<<"2-Greatest Common Divisor"<<"\n";
+	    cout<<"3-Exit"<<"\n\n"; 
+        cout<<"Enter a selection: ";   
+        cin>>selection;
+
+        switch (selection)
+        {
+        case 1:
+            cout<<"\nEnter an integer: ";
+            cin>>num;
+            cout<<"The factorial is "<<factorial(num)<<"\n";
+            break;
+        case 2:
+            cout<<"\nEnter the first number: ";
+            cin>>num1;
+            cout<<"Enter the second number: ";
+            cin>>num2;
+            cout<<"\nThe greatest common divisor is "<<gcd(num1, num2)<<"\n";
+            break;
+        case 3:
+            cout<<"\nAre you sure you want to exit? ";
+            cin>>exit_option;
+            break;
+        default:
+            break;
+        }
+    }
+    while(exit_option != "y" && exit_option != "Y");    
 }

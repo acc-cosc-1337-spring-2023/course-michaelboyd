@@ -10,3 +10,5 @@ int factorial(int num);
 /// @param num2 
 /// @return The greatest common factor
 int gcd(int num1, int num2);
+
+void display_menu();
