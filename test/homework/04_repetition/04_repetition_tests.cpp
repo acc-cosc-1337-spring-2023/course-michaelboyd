@@ -2,7 +2,7 @@
 #include "catch.hpp"
 #include "dna.h"
 
-TEST_CASE("Verify factorial") 
+TEST_CASE("Verify Factorial function") 
 {
 	REQUIRE(factorial(0) == 1);
 	REQUIRE(factorial(1) == 1);
@@ -13,3 +13,9 @@ TEST_CASE("Verify factorial")
 	REQUIRE(factorial(12) == 479001600);
 }
 
+TEST_CASE("Verify Greatest Common Demoniator function") {
+	REQUIRE(gcd(5, 15) == 5);
+	REQUIRE(gcd(21, 28) == 7);
+	REQUIRE(gcd(25, 100) == 25);
+	REQUIRE(gcd(29,3) == 1);
+}

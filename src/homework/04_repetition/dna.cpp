@@ -23,5 +23,16 @@ int factorial(int num)
 
 int gcd(int num1, int num2)
 {
-    return 0;
+    int temp = 0;
+    while(num1 != num2) {
+        if(num1 < num2) {
+            temp = num2;
+            num2 = num1;
+            num1 = temp;
+        }
+        else if(num1 > num2) {
+            num1 = num1 - num2;
+        }
+    }
+    return num1;
 }
