@@ -65,7 +65,14 @@ void display_menu() {
         case 1:
             cout<<"\nEnter an integer: ";
             cin>>num;
-            cout<<"The factorial is "<<factorial(num)<<"\n";
+            if(num < 0 || num > 16) 
+            {
+                cout<<"Please enter a number between 0 and 16 for factorial"<<"\n";
+            }
+            else 
+            {
+                cout<<"The factorial is "<<factorial(num)<<"\n";
+            }
             break;
         case 2:
             cout<<"\nEnter the first number: ";
