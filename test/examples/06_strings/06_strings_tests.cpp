@@ -15,5 +15,7 @@ TEST_CASE("Test string function params val and ref") {
 
 	str_val_ref_param(str1, str2, str3);
 
-	REQUIRE(true == true);
+	REQUIRE(str1 == "C++");
+	REQUIRE(str2 == "changed");
+	REQUIRE(str3 == "Python");
 }
