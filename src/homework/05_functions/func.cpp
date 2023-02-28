@@ -3,6 +3,7 @@
 #include <cctype>
 
 using std::cout;
+using std::cin;
 using std::string;
 
 double get_gc_content(const string &dna)
@@ -52,4 +53,31 @@ string get_dna_compliment(string dna)
         }
     }
     return dna_compliment;
+}
+
+void display_menu(int &selection) {
+    cout<<"\n";
+    cout<<"1-Get GC Content"<<"\n";
+    cout<<"2-Get DNA Compliment"<<"\n";
+	cout<<"3-Exit"<<"\n\n"; 
+    cout<<"Enter a selection: ";   
+    cin>>selection;
+}
+
+bool is_valid_input(string dna) {
+    bool is_valid;
+    for (auto i = 0; i < dna.length(); i++)
+    {
+        auto c = toupper(dna[i]);
+        if(c == 'C' || c == 'G' || c == 'T' || c == 'A') 
+        {
+            is_valid = true;
+        }
+        else 
+        {
+            is_valid = false;
+            break;
+        }
+    }
+    return is_valid;
 }
