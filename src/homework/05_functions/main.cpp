@@ -10,13 +10,15 @@ int main()
     auto selection = 0;
     string dna;
     string exit_option;
+    const string ENTER_DNA_PROMPT = "\nEnter a DNA string: ";
+    const string INVALID_INPUT_ERROR = "The entered DNA string is not valid.\n";
     do
     {
 		display_menu(selection);
         switch (selection)
         {
         case 1:
-            cout<<"\nEnter a DNA string: ";
+            cout<<ENTER_DNA_PROMPT;
             cin>>dna;
             if(is_valid_input(dna))
             {
@@ -24,11 +26,11 @@ int main()
             }
             else 
             {
-                cout<<"The entered DNA string is not valid.\n";
+                cout<<INVALID_INPUT_ERROR;
             }
             break;
         case 2:
-            cout<<"\nEnter a DNA string: ";
+            cout<<ENTER_DNA_PROMPT;
             cin>>dna;
             if(is_valid_input(dna)) 
             {
@@ -36,7 +38,7 @@ int main()
             }
             else 
             {
-                cout<<"The entered DNA stringis not valid.\n";
+                cout<<INVALID_INPUT_ERROR;
             }
             break;
         case 3:
