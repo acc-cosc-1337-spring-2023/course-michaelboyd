@@ -7,6 +7,7 @@ TEST_CASE("Verify get_gc_content") {
 	REQUIRE(get_gc_content("CGCTATAG") == .50);
 	REQUIRE(get_gc_content("AAATATAT") == .00);
 	REQUIRE(get_gc_content("GCGCGCGCGC") == 1.0);
+	REQUIRE(get_gc_content("agctatag") == .375);
 }
 
 TEST_CASE("Verify get_reverse_string") {
@@ -18,5 +19,6 @@ TEST_CASE("Verify get_reverse_string") {
 TEST_CASE("Verify get_dna_compliment") {
 	REQUIRE(get_dna_compliment("AAAACCCGGT") == "ACCGGGTTTT");
 	REQUIRE(get_dna_compliment("CCCGGAAAAT") == "ATTTTCCGGG");
+	REQUIRE(get_dna_compliment("aaaacccggt") == "ACCGGGTTTT");	
 }
 

@@ -1,5 +1,6 @@
 #include "func.h"
 #include <iostream>
+#include <cctype>
 
 using std::cout;
 using std::string;
@@ -9,7 +10,7 @@ double get_gc_content(const string &dna)
     double gc_content_count = 0;
     for (auto &c : dna)
     {
-        if (c == 'G' || c == 'C')
+        if (toupper(c) == 'G' || toupper(c) == 'C')
         {
             gc_content_count++;
         }
@@ -32,7 +33,7 @@ string get_dna_compliment(string dna)
     string dna_compliment = get_reverse_string(dna);
     for (auto i = 0; i < dna_compliment.length(); i++)
     {
-        auto c = dna_compliment[i];
+        auto c = toupper(dna_compliment[i]);
         if (c == 'A')
         {
             dna_compliment[i] = 'T';
