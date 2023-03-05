@@ -1,6 +1,9 @@
 //checking_account.h
 #include <iostream>
 
+#ifndef CHECKING_ACCOUNT_H
+#define CHECKING_ACCOUNT_H
+
 class CheckingAccount
 {
 
@@ -18,3 +21,5 @@ private:
     int balance{0}; //initialize to 0
     void get_balance_from_db();
 };
+
+#endif
