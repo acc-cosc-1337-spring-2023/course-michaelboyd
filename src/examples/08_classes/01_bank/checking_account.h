@@ -1,25 +1,16 @@
 //checking_account.h
 #include <iostream>
+#include "bank_account.h"
 
 #ifndef CHECKING_ACCOUNT_H
 #define CHECKING_ACCOUNT_H
 
-class CheckingAccount
+class CheckingAccount: public BankAccount
 {
-
-friend void show_balance(CheckingAccount account);
-
 public:
-    //constructors
-    CheckingAccount(){get_balance_from_db();} //default constructor
-    //set balance constructor
-    CheckingAccount(int balance) : balance(balance){}
-    int get_balance() const { return balance; }
-    void deposit(int amount);
-    void withdraw(int amount);
-private:
-    int balance{0}; //initialize to 0
-    void get_balance_from_db();
+    CheckingAccount(){ }; //default constructor must be provided if others are defined
+    //C++ will not create the default constructor if other constructors are defined.
+    CheckingAccount(int b) : BankAccount(b){} //initialize balance of CheckingAccount
 };
 
 #endif
