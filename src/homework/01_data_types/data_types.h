@@ -1,7 +1,8 @@
-﻿//example
-int add_numbers(int num1, int num2);
+﻿//write function prototype here
+int multiply_numbers(int num1);
 
-//write function prototype here
+//utility method to display the result of multiplying numbers
+void displayResult(int input, int result);
 
 
 

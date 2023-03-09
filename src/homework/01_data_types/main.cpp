@@ -1,15 +1,21 @@
-﻿//write include statements
+﻿#include "data_types.h"
+#include <iostream>
 
+using std::cout;
+using std::cin;
 
-//write namespace using statement for cout
-
-
-/*
-Call multiply_numbers with 10 and 10 parameter values and display function result
-*/
 int main()
 {
-	
+	int num, num1, result;
+
+	cout << "Enter a whole number: ";
+	cin >> num;
+	result = multiply_numbers(num);
+	displayResult(num, result);
+
+	num1 = 4;
+	result = multiply_numbers(num1);
+	displayResult(num1, result);
 
 	return 0;
 }
